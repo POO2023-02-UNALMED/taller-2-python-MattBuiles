@@ -29,14 +29,16 @@ class Auto:
     def cantidadAsientos(self):
         a=0
         for i in self.asientos:
-            if type(i)=="<class '__main__.Asiento'>":
+            if isinstance(i,Asiento):
                 a+=1
+        print(a)
         return a
     def verificarIntegridad(self):
         b=0
         for i in self.asientos:
-            if i.registro!=self.registro!=self.motor.registro:
-                b+=1
+            if isinstance(i,Asiento):
+              if i.registro!=self.registro!=self.motor.registro:
+                  b+=1
         if b>0:
             return "Las piezas no son originales"
         else:

@@ -25,13 +25,13 @@ class Auto:
         self.motor = motor
         self.registro =registro
         self.cantidadCreados = cantidadCreados
-    def cantidadAsientos(self):
+    def cantidadAsientos(self,cantidadCreados):
         a=0
         for i in self.asientos:
             if type(self.asientos)=="<class '__main__.Asiento'>":
                 a+=1
         return a
-    def verificarIntegridad(self):
+    def verificarIntegridad(self,cantidadCreados):
         b=0
         for i in self.asientos:
             if i.registro!=self.registro!=self.motor.registro:

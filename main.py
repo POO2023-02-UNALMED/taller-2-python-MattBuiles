@@ -24,14 +24,14 @@ class Auto:
         self.marca = marca
         self.motor = motor
         self.registro =registro
-        self.cantidadCreados = cantidadCreados
-    def cantidadAsientos(self,cantidadCreados):
+        cantidadCreados = cantidadCreados
+    def cantidadAsientos(self):
         a=0
         for i in self.asientos:
             if type(self.asientos)=="<class '__main__.Asiento'>":
                 a+=1
         return a
-    def verificarIntegridad(self,cantidadCreados):
+    def verificarIntegridad(self):
         b=0
         for i in self.asientos:
             if i.registro!=self.registro!=self.motor.registro:

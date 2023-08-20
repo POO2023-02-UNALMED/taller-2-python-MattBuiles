@@ -29,7 +29,7 @@ class Auto:
     def cantidadAsientos(self):
         a=0
         for i in self.asientos:
-            if type(self.asientos)=="<class '__main__.Asiento'>":
+            if type(i)=="<class '__main__.Asiento'>":
                 a+=1
         return a
     def verificarIntegridad(self):

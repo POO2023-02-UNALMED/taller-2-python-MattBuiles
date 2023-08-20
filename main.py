@@ -37,9 +37,11 @@ class Auto:
         b=0
         for i in self.asientos:
             if isinstance(i,Asiento):
-              if i.registro!=self.registro!=self.motor.registro:
+              if i.registro!=self.registro or i.registro!=self.motor.registro or self.motor.registro!=self.registro:
                   b+=1
         if b>0:
+            print("Las piezas no son originales")
             return "Las piezas no son originales"
         else:
+            print("Auto original")
             return "Auto original"
